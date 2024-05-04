@@ -4,6 +4,11 @@ public class DeluxePizza extends Pizza {
 
     public DeluxePizza(Boolean isVeg) {
         super(isVeg);
-        // your code goes here
+        if(isVeg){
+            setPrice(150);
+        }
+        else{
+            setPrice(200);
+        }
     }
 }
