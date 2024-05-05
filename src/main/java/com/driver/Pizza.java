@@ -11,17 +11,19 @@ public class Pizza {
     private int cheeseFlag = 0;
     private int toppingFlag = 0;
     private int takeawayFlag = 0;
-    private int cheesePrice;
+    private final int cheesePrice = 80;
     private int toppingPrice;
-    private int takeawayPrice;
+    private final int takeawayPrice = 20;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         if(isVeg){
             this.price = 300;
+            toppingPrice = 70;
         }
         else{
             this.price = 400;
+            toppingPrice = 120;
         }
     }
 
@@ -33,22 +35,14 @@ public class Pizza {
 
     public void addExtraCheese(){
         cheeseFlag = 1;
-        cheesePrice = 80;
     }
 
     public void addExtraToppings(){
         toppingFlag = 1;
-        if(isVeg){
-            toppingPrice = 70;
-        }
-        else{
-            toppingPrice = 120;
-        }
     }
 
     public void addTakeaway(){
         takeawayFlag = 1;
-        takeawayPrice = 20;
     }
 
     public String getBill(){

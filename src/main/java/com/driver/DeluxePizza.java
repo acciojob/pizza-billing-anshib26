@@ -6,11 +6,6 @@ public class DeluxePizza extends Pizza {
         super(isVeg);
         addExtraCheese();
         addExtraToppings();
-//        if(isVeg){
-//            setPrice(150);
-//        }
-//        else{
-//            setPrice(200);
-//        }
     }
+
 }
