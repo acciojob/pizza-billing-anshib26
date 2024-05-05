@@ -11,6 +11,7 @@ public class Pizza {
     private int cheeseFlag = 0;
     private int toppingFlag = 0;
     private int takeawayFlag = 0;
+    private int basePrice = 0;
     private final int cheesePrice = 80;
     private int toppingPrice;
     private final int takeawayPrice = 20;
@@ -19,10 +20,12 @@ public class Pizza {
         this.isVeg = isVeg;
         if(isVeg){
             this.price = 300;
+            basePrice = 300;
             toppingPrice = 70;
         }
         else{
             this.price = 400;
+            basePrice = 400;
             toppingPrice = 120;
         }
     }
@@ -46,7 +49,7 @@ public class Pizza {
     }
 
     public String getBill(){
-        bill = "Base Price Of The Pizza: " + getPrice();
+        bill = "Base Price Of The Pizza: " + basePrice;
         if(cheeseFlag==1){bill += "\nExtra Cheese Added: " + cheesePrice; setPrice(cheesePrice);}
         if(toppingFlag==1){bill += "\nExtra Toppings Added: " + toppingPrice; setPrice(toppingPrice);}
         if(takeawayFlag==1){bill += "\nPaperbag Added: " + takeawayPrice; setPrice(takeawayPrice);}
